@@ -22,10 +22,7 @@ class AlarmClock {
       );
     }
     getCurrentFormattedTime() {
-      const now = new Date();
-      let hours = now.getHours();
-      let minutes = now.getMinutes();
-      return '$(hours):$(minutes)';
+      return new Date().toLocaleTimeString().slice(0, -3);
     }
     start() {
       if (this.intervalId) {
